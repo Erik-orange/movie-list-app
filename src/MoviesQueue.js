@@ -2,13 +2,12 @@ import React from 'react';
 import Movie from './Movie';
 import "./App.css";
 
-const MoviesList = (props) => {
-
+const MoviesQueue = (props) => {
   return (
     <div>
-      <h1>Available Movies</h1>
+      <h1>Movies In Your Queue</h1>
       <ul>
-        {props.data.map(movie => (                                    
+        {props.data.map(movie => (
           <li key={movie.id}>
             <Movie
               id={movie.id}
@@ -16,7 +15,7 @@ const MoviesList = (props) => {
               title={movie.original_title}
               releaseDate={movie.release_date}
               selectionBtn={(
-                <button onClick={() => props.addToQueue(movie)}>Add To Queue</button>
+                <button onClick={() => props.removeFromQueue(movie.id)}>Remove From Queue</button>
               )}
             />
           </li>
@@ -24,6 +23,6 @@ const MoviesList = (props) => {
       </ul>
     </div>
   );
-};                                      
+}
 
-export default MoviesList;
+export default MoviesQueue;
