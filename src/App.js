@@ -1,7 +1,7 @@
 import React from 'react';
 import MoviesList from './MoviesList'
 import MoviesQueue from './MoviesQueue'
-import "./App.css";
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -49,7 +49,6 @@ class App extends React.Component {
       queueMovies: filteredMovies
     });
   }
-
   render() {
     console.log(this.state.queueMovies);
     return (
